@@ -37,6 +37,8 @@ body {
 
 .slider-bar {
   border-radius: inherit;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   min-height: inherit;
   background-color: rgb(50, 111, 243);
   position: relative;
