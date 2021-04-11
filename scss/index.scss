@@ -24,13 +24,22 @@ body {
   background-color: rgba(223, 223, 223, 0.933);
   min-height: 10px;
   border-radius: 10px;
-  position: relative;
+}
+
+.slider:focus {
+  outline: none;
+}
+
+.slider:focus-visible {
+  outline: 1px dashed;
+  outline-width: thin;
 }
 
 .slider-bar {
   border-radius: inherit;
   min-height: inherit;
   background-color: rgb(50, 111, 243);
+  position: relative;
 }
 
 .slider-track-button {

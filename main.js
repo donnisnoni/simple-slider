@@ -39,8 +39,9 @@
     function setValue(percent) {
       slider.dataset.value = percent;
 
-      sliderTrackButtonWidth = sliderTrackButton.getBoundingClientRect().width;
-      sliderTrackButton.style.left = `calc(${percent}% - ${sliderTrackButtonX}px)`;
+      const sliderTrackButtonWidth = sliderTrackButton.getBoundingClientRect()
+        .width;
+      sliderTrackButton.style.left = `calc((100% - (${sliderTrackButtonWidth}px / 2))`;
       sliderBar.style.width = `calc(${percent}% - ${sliderTrackButtonX}px + (${sliderTrackButtonWidth}px / 2))`;
     }
 
