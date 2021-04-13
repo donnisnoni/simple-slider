@@ -17,6 +17,9 @@
 
     let sliderTrackButtonX = 0;
 
+    // Options
+    const roundValue =
+      slider.dataset.roundValue && slider.dataset.roundValue === "true";
     slider.dataset.value && setValue(slider.dataset.value);
 
     sliderTrackButton.addEventListener("mousedown", onMouseDown);
@@ -32,7 +35,10 @@
         intersect = sliderRect.width;
       }
 
-      const percent = (intersect * 100) / sliderRect.width;
+      let percent = (intersect * 100) / sliderRect.width;
+      if (roundValue) {
+        percent = Math.round(percent);
+      }
       setValue(percent);
     }
 
