@@ -41,7 +41,7 @@
 
       const sliderTrackButtonWidth = sliderTrackButton.getBoundingClientRect()
         .width;
-      sliderTrackButton.style.left = `calc((100% - (${sliderTrackButtonWidth}px / 2))`;
+      sliderTrackButton.style.left = `calc(100% - (${sliderTrackButtonWidth}px / 2)`;
       sliderBar.style.width = `calc(${percent}% - ${sliderTrackButtonX}px + (${sliderTrackButtonWidth}px / 2))`;
     }
 
